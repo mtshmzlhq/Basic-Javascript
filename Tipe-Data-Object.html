@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+
+        const orang ={
+            "nama" :"Mu'tashim Zia Ul Haq",
+            alamat: "Kota Depok",
+            umur: 23
+        };
+        
+        //Menambah atau mengubah
+        //ubah property/atribut
+        //orang ["nama"] = "Mutashim Zia Ul Haq";
+        //orang ["alamat"] = "Kota Depok";
+        //orang ["umur"] = 23;
+
+        console.info(`nama : ${orang["nama lengkap"]}`);
+        console.info(`nama : ${orang.alamat}`);
+        console.info(`nama : ${orang.umur}`);
+
+        console.table (orang);
+
+        delete orang ["umur"];
+        
+        console.table(orang);
+
+    </script>
+</body>
+</html>
