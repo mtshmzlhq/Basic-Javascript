@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+/* with statement meruapak fitur yang digunakan 
+untuk menurunkan sebuah scope data.
+
+dengan menggunakan with statement, kita bisa mengakses
+property dalam sebuah data tanpa harus menyebut datanya */
+
+//Tanpa With Statement 
+
+const person = {
+    firstName: "Mutashim",
+    middleName: "Zia",
+    lastName:"Ul Haq"
+}
+console.log(person.firstName);
+console.log(person.middleName);
+console.log(person.lastName);
+
+//dengan With Statement
+const orang = {
+    firstName: "Mutashim",
+    middleName: "Zia",
+    lastName:"Ul Haq"
+}
+
+with (orang){
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName);
+}
+
+/* with statement tidak direkomendasikan
+walaupun fitur with statement ini sangat menarik
+namun kebanyakan orang tidak merekomendsikan penggunaa with statement
+hal ini karena with statement kadang membuat sebuah kode menjadi ambigu
+  
+  //salah satu kode ambigu di with statement
+
+const person = {
+    firstName: "Mutashim",
+    middleName: "Zia",
+    lastName:"Ul Haq"
+} 
+const firstName = "Budi"
+const lastName = "Nugraha"
+
+with (person){
+    console.log(firstName); //Niatnya ingin Budi
+    console.log(middleName);
+    console.log(lastName); //Niatnya ingin Nugraha
+*/
+  
+  </script>
+</body>
+</html>
