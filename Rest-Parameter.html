@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    <script>
+/*
+- Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyaknya
+pada satu parameter dan secara otomatis akan di konversi menjadi array
+- untuk membuat rest parameter, ada ketentuannya
+- Rest parameter hanya boleh ada satu di function, tidak boleh lebih dari satu
+- Rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan
+atau di akhir, kecuali memang cuma ada 1 parameter
+- di bahasa pemprograman lain, ada juga yang bilang ini adalah variable argument
+*/
+
+//kode rest parameter
+
+function sum (name, ...data){
+    let total = 0 
+    for (const item of data){
+        total += item;
+    }
+    document.writeln (`Total ${name} is ${total}`);
+}
+
+sum (`Orange`, 2, 3, 4, 6, 7, 8);
+sum (`Apple`, 5, 5, 6, 7, 5, 6);
+sum (`banana`, 9, 5, 2, 3, 4);
+
+//menggunakan kode spread syntax di rest parameter
+sum (`Orange`, ...[2, 3, 4, 6, 7, 8]);
+sum (`apple`, ...[5, 9, 5, 6, 7, 8]);
+sum (`banana`, ...[5, 7, 8, 6, 7, 8]);
+
+const values = [10, 10, 10, 10, 10];
+sum("Test", ...values);
+
+/*
+ARGUMENTS OBJECT
+- Sebelum ada fitur rest parameter, di javascript sudah ada fitru yang bernama
+argument object
+- Ini ada lah fitur dimana kita bisa mengambil semua parameter dalam bentuk array
+dengan menggunakan objecy bernama arguments
+- Arguments secara otomatis bisa digunakan di function
+- Namun perlu diingat, bahwa untuk javascript saat ini, lebih biak disarankan menggunakan
+rest parameter dibandingkan arguments object */
+
+//kode arguments object
+function oldSum(){
+    let total = 0
+    for(const item of arguments){
+        total += arguments;
+    }
+    console.info(`<p>Total is ${total}</p>`);
+}
+    </script>
+</body>
+</html>
