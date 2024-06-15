@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+/*
+- Arrow Function adalah alternatif pembuatan function yang lebig sederhana
+dari function biasanya
+- Namun terdpat limitasi dan juga tidak bisa digunakan di semua situasi
+- Dinamakn arrow function karean menggunakan tanda => (seperti panah)
+- Berikut contoh beberapa kekurangan arrow function:
+        # tidak memiliki fitur arguments object
+        # tidak bisa menggunakan function generator
+        # tidak bisa mengakses this (yang nanti dibahas di function di object)
+        # tidak bisa mengakses super (yang nanti akan dibahas di javascript object oriented programming)
+*/
+//kode embuat arrow function
+
+// const sayHello = (name) => {
+//     const say = `Hello ${name}`;
+//     console.info (say);
+// }
+
+/* Arrow Function tanpa block
+- jika sebuah arrow function isinya sederhana, misalnya hanya satu baris
+- kita bisa membuat arrow function tanpa harus menggunakan block
+*/
+
+const sayHello = (name) => console.info (`Hello ${name}`); //arrow function tanpa blok
+ 
+sayHello ("Mutashim");
+
+/*
+Arrow Function return value
+- arrow function bisa mengembalikan value, sama seperti function biasanya
+- jika menggunakan blok, maka kita perlu menggunakan kaya kunci return
+- jika tidka menggunakan blok, kita tidak perlu menggunakan kata kunci return
+*/
+
+// const sum = (first, second) => {
+//     return first + second ;
+// }
+
+const sum = (first, second) => first + second;
+console.info(sum(100, 100));
+
+/*
+Arrow function tanpa kurung parameter
+- jika parameter di arrow function hanya satu, kita tidak bisa 
+menggunakan kurung pada parameter
+*/
+
+/*
+- karena arrow function sama seperti anonymous function
+- jadi kita juga bisa menggunakan arrow function sebagai
+parameter di function lain
+*/
+
+function giveMeName(callback) {
+    callback ("Mutashim");
+}
+
+giveMeName((name)=> console.info (`Hello ${name}`));
+
+
+    </script>
+</body>
+</html>
